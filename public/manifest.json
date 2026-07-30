@@ -7,7 +7,7 @@
     "start_url": "/",
     "name": "Mohamed Dukuray Portfolio",
     "short_name": "Mohamed Dukuray",
-    "description": "Full Stack Developer portfolio focused on Java, Spring Boot, Angular, TypeScript and DevOps automation.",
+    "description": "Full Stack Developer portfolio focused on Java, Spring Boot, React, TypeScript and DevOps automation.",
     "icons": [
         {
             "src": "/icon-192x192.png",

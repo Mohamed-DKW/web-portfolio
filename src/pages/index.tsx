@@ -40,7 +40,6 @@ type Language = "es" | "en";
 const techWords = [
   "Java",
   "Spring Boot",
-  "Angular",
   "React",
   "TypeScript",
   "Docker",
@@ -53,9 +52,9 @@ const content = {
     meta: {
       title: "Mohamed Dukuray | Full Stack Developer",
       description:
-        "Portfolio profesional de Mohamed Dukuray, desarrollador Full Stack en Barcelona especializado en Java, Spring Boot, Angular, TypeScript, Docker y APIs REST.",
+        "Portfolio profesional de Mohamed Dukuray, desarrollador Full Stack en Barcelona especializado en Java, Spring Boot, React, TypeScript, Docker y APIs REST.",
       keywords:
-        "Mohamed Dukuray, Full Stack Developer, Backend Java Developer, Software Engineer, Java, Spring Boot, Angular, TypeScript, Docker, PostgreSQL, Barcelona",
+        "Mohamed Dukuray, Full Stack Developer, Backend Java Developer, Software Engineer, Java, Spring Boot, React, TypeScript, Docker, PostgreSQL, Barcelona",
       author: "Mohamed Dukuray",
       siteName: "Mohamed Dukuray Portfolio",
       url: "https://mohamed-dukuray.dev",
@@ -74,10 +73,11 @@ const content = {
       name: "Mohamed Dukuray",
       role: "Full Stack Developer",
       intro:
-        "Desarrollo aplicaciones web escalables con Java, Spring Boot y Angular, cuidando tanto la arquitectura backend como la experiencia de usuario.",
+        "Desarrollo aplicaciones web escalables con Java, Spring Boot y React, cuidando tanto la arquitectura backend como la experiencia de usuario.",
       open: "Open to Work",
       location: "Barcelona, España",
       projects: "Ver proyectos",
+      cv: "Descargar CV",
       contact: "Contactar",
       scroll: "Scroll para descubrir",
     },
@@ -85,9 +85,9 @@ const content = {
       label: "Sobre mí",
       title:
         "Soy desarrollador Full Stack con foco en backend Java, APIs REST y experiencias frontend modernas.",
-      body: "Me gusta construir aplicaciones mantenibles con Java, Spring Boot, Angular y TypeScript. Disfruto especialmente diseñando APIs, trabajando con bases de datos relacionales y creando interfaces claras. También cuento con experiencia profesional en automatización con Docker, Bash y Ansible, además de una base previa en soporte técnico. Actualmente busco una oportunidad como Full Stack Developer o Backend Java Developer donde seguir creciendo y aportar valor desde el primer día.",
+      body: "Me gusta construir aplicaciones mantenibles con Java, Spring Boot, React y TypeScript. Disfruto especialmente diseñando APIs, trabajando con bases de datos relacionales y creando interfaces claras. También cuento con experiencia profesional en automatización con Docker, Bash y Ansible, además de una base previa en soporte técnico. Actualmente busco una oportunidad como Full Stack Developer o Backend Java Developer donde seguir creciendo y aportar valor desde el primer día.",
       stats: [
-        { label: "Stack principal", value: "Spring Boot + Angular" },
+        { label: "Stack principal", value: "Java + React" },
         { label: "Experiencia profesional", value: "4 roles" },
         { label: "Ubicación", value: "Barcelona" },
       ],
@@ -134,7 +134,7 @@ const content = {
         {
           service: "Frontend Development",
           description:
-            "Desarrollo de interfaces modernas utilizando Angular y TypeScript.",
+            "Desarrollo de interfaces modernas utilizando React y TypeScript.",
           icon: MonitorSmartphone,
         },
         {
@@ -167,7 +167,7 @@ const content = {
         {
           name: "Frontend",
           icon: Laptop,
-          skills: ["Angular", "React", "TypeScript", "JavaScript", "HTML", "CSS"],
+          skills: ["React", "TypeScript", "JavaScript", "HTML", "CSS"],
         },
         {
           name: "DevOps",
@@ -263,9 +263,9 @@ const content = {
     meta: {
       title: "Mohamed Dukuray | Full Stack Developer",
       description:
-        "Professional portfolio of Mohamed Dukuray, a Barcelona-based Full Stack Developer focused on Java, Spring Boot, Angular, TypeScript, Docker and REST APIs.",
+        "Professional portfolio of Mohamed Dukuray, a Barcelona-based Full Stack Developer focused on Java, Spring Boot, React, TypeScript, Docker and REST APIs.",
       keywords:
-        "Mohamed Dukuray, Full Stack Developer, Backend Java Developer, Software Engineer, Java, Spring Boot, Angular, TypeScript, Docker, PostgreSQL, Barcelona",
+        "Mohamed Dukuray, Full Stack Developer, Backend Java Developer, Software Engineer, Java, Spring Boot, React, TypeScript, Docker, PostgreSQL, Barcelona",
       author: "Mohamed Dukuray",
       siteName: "Mohamed Dukuray Portfolio",
       url: "https://mohamed-dukuray.dev",
@@ -284,10 +284,11 @@ const content = {
       name: "Mohamed Dukuray",
       role: "Full Stack Developer",
       intro:
-        "I build scalable web applications with Java, Spring Boot and Angular, caring about backend architecture and user experience.",
+        "I build scalable web applications with Java, Spring Boot and React, caring about backend architecture and user experience.",
       open: "Open to Work",
       location: "Barcelona, Spain",
       projects: "View projects",
+      cv: "Download CV",
       contact: "Contact",
       scroll: "Scroll to discover",
     },
@@ -295,9 +296,9 @@ const content = {
       label: "About",
       title:
         "I am a Full Stack Developer focused on Java backends, REST APIs and modern frontend experiences.",
-      body: "I enjoy building maintainable applications with Java, Spring Boot, Angular and TypeScript. I especially like designing APIs, working with relational databases and creating clear interfaces. I also have professional experience in process automation with Docker, Bash and Ansible, plus a previous technical support background. I am currently looking for a Full Stack Developer or Backend Java Developer opportunity where I can keep growing and contribute from day one.",
+      body: "I enjoy building maintainable applications with Java, Spring Boot, React and TypeScript. I especially like designing APIs, working with relational databases and creating clear interfaces. I also have professional experience in process automation with Docker, Bash and Ansible, plus a previous technical support background. I am currently looking for a Full Stack Developer or Backend Java Developer opportunity where I can keep growing and contribute from day one.",
       stats: [
-        { label: "Core stack", value: "Spring Boot + Angular" },
+        { label: "Core stack", value: "Java + React" },
         { label: "Professional roles", value: "4" },
         { label: "Location", value: "Barcelona" },
       ],
@@ -343,7 +344,7 @@ const content = {
         },
         {
           service: "Frontend Development",
-          description: "Modern interfaces built with Angular and TypeScript.",
+          description: "Modern interfaces built with React and TypeScript.",
           icon: MonitorSmartphone,
         },
         {
@@ -375,7 +376,7 @@ const content = {
         {
           name: "Frontend",
           icon: Laptop,
-          skills: ["Angular", "React", "TypeScript", "JavaScript", "HTML", "CSS"],
+          skills: ["React", "TypeScript", "JavaScript", "HTML", "CSS"],
         },
         {
           name: "DevOps",
@@ -626,6 +627,11 @@ export default function Home() {
               >
                 {t.hero.projects} <ChevronRight className="ml-1 h-4 w-4" />
               </Button>
+              <Link href="/cv-mohamed-dukuray.html" download passHref>
+                <Button variant="outline">
+                  {t.hero.cv} <ArrowDownToLine className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
               <Link href="mailto:mdukurayw@gmail.com" passHref>
                 <Button variant="outline">
                   {t.hero.contact} <Mail className="ml-2 h-4 w-4" />
@@ -971,6 +977,12 @@ export default function Home() {
                   <Button variant="outline">
                     <Github className="mr-2 h-4 w-4" />
                     {t.contact.github}
+                  </Button>
+                </Link>
+                <Link href="/cv-mohamed-dukuray.html" download passHref>
+                  <Button variant="outline">
+                    <ArrowDownToLine className="mr-2 h-4 w-4" />
+                    {t.contact.cv}
                   </Button>
                 </Link>
               </div>

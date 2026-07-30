@@ -33,6 +33,7 @@ export default function Footer({ language = "es" }: FooterProps) {
               ? "Desarrollado con Next.js, Tailwind CSS y Framer Motion."
               : "Built with Next.js, Tailwind CSS and Framer Motion."}
           </p>
+          {time && <p className="text-xs text-muted-foreground">{time}</p>}
         </span>
         <Link
           href="mailto:mdukurayw@gmail.com"

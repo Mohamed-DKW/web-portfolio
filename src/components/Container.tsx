@@ -96,11 +96,11 @@ export default function Container(props: ContainerProps) {
   const router = useRouter();
   const meta = {
     title: "Mohamed Dukuray | Full Stack Developer",
-    description: `Portfolio profesional de Mohamed Dukuray, desarrollador Full Stack especializado en Java, Spring Boot y Angular.`,
+    description: `Portfolio profesional de Mohamed Dukuray, desarrollador Full Stack especializado en Java, Spring Boot y React.`,
     image: "/assets/logo.webp",
     type: "website",
     keywords:
-      "Mohamed Dukuray, Full Stack Developer, Java, Spring Boot, Angular, React",
+      "Mohamed Dukuray, Full Stack Developer, Java, Spring Boot, React, TypeScript",
     author: "Mohamed Dukuray",
     siteName: "Mohamed Dukuray Portfolio",
     url: "https://mohamed-dukuray.dev",

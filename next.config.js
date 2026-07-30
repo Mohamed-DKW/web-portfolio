@@ -1,33 +1,25 @@
-import WithPWA from "next-pwa";
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
 
-const withPWA = WithPWA({
-  dest: "public",
-  disable: process.env.NODE_ENV === "development",
-  register: true,
-  scope: "/",
-  sw: "service-worker.js",
-});
+let basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+let assetPrefix = process.env.NEXT_PUBLIC_BASE_PATH ? `${process.env.NEXT_PUBLIC_BASE_PATH}/` : '';
 
-/**
- * @type {import('next').NextConfig}
- */
-// @ts-ignore
-const config = withPWA({
-  reactStrictMode: true,
+if (isGithubActions && process.env.GITHUB_REPOSITORY) {
+  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '');
+  if (!repo.endsWith('.github.io')) {
+    basePath = `/${repo}`;
+    assetPrefix = `/${repo}/`;
+  }
+}
 
-  // ✅ REQUIRED for Docker production
-  output: "standalone",
-
-  /**
-   * If you are using `appDir` then you must comment the below `i18n` config out.
-   *
-   * @see https://github.com/vercel/next.js/issues/41980
-   */
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export",
+  images: {
+    unoptimized: true,
   },
-});
+  basePath: basePath,
+  assetPrefix: assetPrefix,
+  reactStrictMode: true,
+};
 
-export default config;
-
+export default nextConfig;
