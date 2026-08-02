@@ -1,55 +1,102 @@
-# 🖥️ Personal Portfolio
+#  Mohamed Dukuray - Portfolio
 
-A sleek, modern, and responsive portfolio bootstrapped with [create-t3-app](https://create.t3.gg/).
+<div align="center">
 
-[Website Preview](https://github.com/wendoj/portfolio/assets/77996774/b73b02d7-0657-41e3-9124-e6d04b17fe93)
+### Full Stack Developer | Java • Spring Boot • React • TypeScript
 
-[🔗 Link to portfolio](https://wendoj.vercel.app)
+Portfolio personal desarrollado con **Next.js**, donde presento mi experiencia, proyectos y tecnologías con las que trabajo.
 
-All you need to know about me, my projects and skills can be found here. Personalize the portfolio by modifying `src/pages/index.tsx` and `src/styles/globals.css` to emulate your own portfolio. Made some improvements and want to share? Open a pull request.
-For any issues, feel free to report them here.
+[🌐 Portfolio](https://mohamed-dkw.github.io/web-portfolio/) • [💼 LinkedIn](https://www.linkedin.com/in/mohamed-dukuray/) • [💻 GitHub](https://github.com/Mohamed-DKW)
 
-## 🎉 Features
-- **Responsive Design**: The portfolio is designed to be fully responsive, providing an optimal viewing experience across a wide range of devices from desktops to mobile phones.
-- **Easy Customization**: The portfolio structure is straightforward and well organized, making it easy to customize and showcase your unique set of skills and projects.
-- **Stunning UI/UX Design**: The portfolio boasts a sleek and modern design, using smooth animations to capture the attention of potential employers or clients.
-- **Interactive UI**: Utilizing modern web development techniques, the portfolio offers an interactive user interface that enhances user experience, such as `locomotive-scroll` and `framer-motion`.
+</div>
 
-## 🚀 Getting Started
+---
+## 👨‍💻 Sobre mí
 
-### Prerequisites
-To get started with this portfolio, ensure that you have the following installed on your system:
-- Node.js
-- npm
-- git
+Soy **Full Stack Developer** con formación en Desarrollo de Aplicaciones Web y experiencia en desarrollo, automatización de entornos y soporte técnico de aplicaciones.
 
-## 🛠️ Installation
-Follow the steps below to clone and run this project on your local system:
+Me apasiona crear aplicaciones escalables utilizando **Java**, **Spring Boot**, **React** y **TypeScript**, aplicando buenas prácticas de desarrollo, arquitectura limpia y herramientas modernas.
+
+Actualmente busco nuevas oportunidades como **Full Stack Developer** o **Backend Java Developer**, donde seguir aprendiendo y aportar valor en proyectos reales.
+
+---
+##  Sobre el proyecto
+
+Este repositorio contiene mi portfolio personal, diseñado para mostrar mi trayectoria profesional, experiencia y proyectos como **Full Stack Developer**.
+
+El objetivo de este proyecto es ofrecer una visión clara de mis habilidades técnicas, tecnologías y proyectos desarrollados, utilizando una interfaz moderna, responsive y con animaciones fluidas.
+
+---
+
+## 🛠️ Tecnologías
+
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+### Herramientas
+
+- Git
+- GitHub
+- Vercel
+
+---
+
+
+## 🚀 Instalación
+
+Clona el repositorio:
 
 ```bash
-# Clone the repository
-$ git clone https://github.com/wendoj/developer-portfolio.git
-
-# Navigate to the project directory
-$ cd developer-portfolio
-
-# Remove current origin repository
-$ git remote remove origin
+git clone https://github.com/Mohamed-DKW/web-portfolio.git
 ```
 
-<br />
+Accede al proyecto:
 
-Then install the required dependencies:
 ```bash
-# Install dependencies
-$ npm install
-
-# Start the development server:
-$ npm run dev
+cd portfolio
 ```
-Now, open your browser and navigate to `http://localhost:3000` to view your portfolio live.
+
+Instala las dependencias:
+
+```bash
+npm install
+```
+
+Ejecuta el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+La aplicación estará disponible en:
+
+```text
+http://localhost:3000
+```
+
+---
+
+## 📫 Contacto
+
+📧 **Email:** mdukurayw@gmail.com
+
+💼 **LinkedIn:**  
+https://www.linkedin.com/in/mohamed-dukuray/
+
+💻 **GitHub:**  
+https://github.com/Mohamed-DKW
+
+🌐 **Portfolio:**  
+https://mohamed-dkw.github.io/web-portfolio/
+
+---
+
+<div align="center">
 
 
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+</div>
