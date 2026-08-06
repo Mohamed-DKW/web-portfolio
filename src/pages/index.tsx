@@ -65,7 +65,7 @@ const content = {
       { href: "#projects", text: "Proyectos" },
       { href: "#services", text: "Qué hago" },
       { href: "#skills", text: "Skills" },
-      { href: "#timeline", text: "Timeline" },
+      { href: "#experience", text: "Experiencia" },
       { href: "#contact", text: "Contacto" },
     ],
     hero: {
@@ -99,25 +99,18 @@ const content = {
       counter: "proyectos",
       items: [
         {
-          title: "Portfolio Website",
+          title: "SpellNet",
           description:
-            "Portfolio personal desarrollado con Next.js, Tailwind CSS y Framer Motion.",
-          image: "/assets/portfolio.webm",
-          href: "https://github.com/Mohamed-DKW",
+            "Chat virtual con IA integrada ambientada en juegos de rol, desarrollado con React, TypeScript y Node.js",
+          image: "/assets/spellnet.webp",
+          href: "https://github.com/Mohamed-DKW/SpellNet",
         },
         {
-          title: "DevOps Automation",
+          title: "BlackBird (En desarrollo)",
           description:
-            "Automatización de entornos con Docker, Ansible, Bash y GitLab.",
-          image: "/assets/infinitevps.webm",
-          href: "https://github.com/Mohamed-DKW",
-        },
-        {
-          title: "Hotel Platform",
-          description:
-            "Plataforma web para hotel con reservas, diseño responsive e integración API.",
-          image: "/assets/unqueue.webm",
-          href: "https://github.com/Mohamed-DKW",
+            "Red social en tiempo real (inspirada en Twitter/X) construida con Express, TypeScript, SQLite y websockets.",
+          image: "/assets/blackbird-logo.webp",
+          href: "https://github.com/Mohamed-DKW/blackbird",
         },
       ],
     },
@@ -230,23 +223,6 @@ const content = {
         },
       ],
     },
-    timeline: {
-      label: "Timeline",
-      title: "Camino profesional",
-      items: [
-        { year: "2023-2024", title: "Helpdesk Gamma" },
-        { year: "2024", title: "Helpdesk SOSMATIC" },
-        { year: "2025", title: "DevOps Developer" },
-        { year: "2025", title: "Frontend Developer" },
-        { year: "2026", title: "Full Stack Developer (Open to Work)" },
-      ],
-    },
-    certificates: {
-      label: "Certificados",
-      title: "Preparado para próximas certificaciones.",
-      body: "Esta sección queda lista para incorporar certificados de Java, Spring, cloud, DevOps o frontend conforme los vayas añadiendo.",
-      empty: "Certificados próximamente",
-    },
     contact: {
       title: "Trabajemos juntos.",
       body: "Actualmente estoy buscando nuevas oportunidades como Full Stack Developer o Backend Java Developer. Si crees que puedo aportar valor a tu equipo, estaré encantado de hablar contigo.",
@@ -276,7 +252,7 @@ const content = {
       { href: "#projects", text: "Projects" },
       { href: "#services", text: "What I do" },
       { href: "#skills", text: "Skills" },
-      { href: "#timeline", text: "Timeline" },
+      { href: "#experience", text: "Experience" },
       { href: "#contact", text: "Contact" },
     ],
     hero: {
@@ -310,25 +286,18 @@ const content = {
       counter: "projects",
       items: [
         {
-          title: "Portfolio Website",
+          title: "SpellNet",
           description:
-            "Personal portfolio built with Next.js, Tailwind CSS and Framer Motion.",
-          image: "/assets/portfolio.webm",
-          href: "https://github.com/Mohamed-DKW",
+            "RPG-themed virtual chat with integrated AI, developed with React, TypeScript, and Node.js",
+          image: "/assets/spellnet.webp",
+          href: "https://github.com/Mohamed-DKW/SpellNet",
         },
         {
-          title: "DevOps Automation",
+          title: "BlackBird (En desarrollo)",
           description:
-            "Environment automation with Docker, Ansible, Bash and GitLab.",
-          image: "/assets/infinitevps.webm",
-          href: "https://github.com/Mohamed-DKW",
-        },
-        {
-          title: "Hotel Platform",
-          description:
-            "Hotel web platform with bookings, responsive design and API integration.",
-          image: "/assets/unqueue.webm",
-          href: "https://github.com/Mohamed-DKW",
+            "Red social en tiempo real (inspirada en Twitter/X) construida con Express, TypeScript, SQLite y websockets.",
+          image: "/assets/blackbird-logo.webp",
+          href: "https://github.com/Mohamed-DKW/blackbird",
         },
       ],
     },
@@ -434,23 +403,6 @@ const content = {
           ],
         },
       ],
-    },
-    timeline: {
-      label: "Timeline",
-      title: "Professional path",
-      items: [
-        { year: "2023-2024", title: "Helpdesk Gamma" },
-        { year: "2024", title: "Helpdesk SOSMATIC" },
-        { year: "2025", title: "DevOps Developer" },
-        { year: "2025", title: "Frontend Developer" },
-        { year: "2026", title: "Full Stack Developer (Open to Work)" },
-      ],
-    },
-    certificates: {
-      label: "Certificates",
-      title: "Ready for upcoming certifications.",
-      body: "This section is prepared for Java, Spring, cloud, DevOps or frontend certificates as you add them.",
-      empty: "Certificates coming soon",
     },
     contact: {
       title: "Let's work together.",
@@ -565,7 +517,7 @@ export default function Home() {
         <section
           id="home"
           data-scroll-section
-          className="mt-36 flex w-full flex-col items-center xl:mt-0 xl:min-h-screen xl:flex-row xl:justify-between"
+          className="mt-36 flex w-full flex-col items-center xl:mt-0 xl:min-h-screen xl:flex-row xl:center-justify"
         >
           <div className={styles.intro}>
             <div
@@ -649,16 +601,6 @@ export default function Home() {
               <TriangleDownIcon className="mt-1 animate-bounce" />
             </div>
           </div>
-          <div
-            data-scroll
-            data-scroll-speed="-.01"
-            id={styles["canvas-container"]}
-            className="mt-14 h-full w-full xl:mt-0"
-          >
-            <Suspense fallback={<span>Loading...</span>}>
-              <Spline scene="/assets/scene.splinecode" />
-            </Suspense>
-          </div>
         </section>
 
         <section id="about" data-scroll-section>
@@ -729,13 +671,11 @@ export default function Home() {
                       <Card id="tilt">
                         <CardHeader className="p-0">
                           <Link href={project.href} target="_blank" passHref>
-                            <video
-                              src={project.image}
-                              autoPlay
-                              loop
-                              muted
-                              className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
-                            />
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="aspect-video h-full w-full rounded-t-md bg-primary object-cover"
+                              />
                           </Link>
                         </CardHeader>
                         <CardContent className="absolute bottom-0 w-full bg-background/60 backdrop-blur">
@@ -758,7 +698,7 @@ export default function Home() {
               </Carousel>
               <div className="py-2 text-center text-sm text-muted-foreground">
                 <span className="font-semibold">
-                  {current} / {count}
+                  {current} / {t.projects.items.length}
                 </span>{" "}
                 {t.projects.counter}
               </div>
@@ -887,60 +827,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <section id="timeline" data-scroll-section className="my-40">
-          <div data-scroll data-scroll-speed=".4">
-            <span className="text-gradient clash-grotesk text-base font-semibold tracking-tight">
-              {t.timeline.label}
-            </span>
-            <h2 className="mt-3 text-5xl font-semibold tracking-tighter xl:text-7xl">
-              {t.timeline.title}
-            </h2>
-            <div className="mt-10 grid gap-4 md:grid-cols-5">
-              {t.timeline.items.map((item) => (
-                <motion.div
-                  key={`${item.year}-${item.title}`}
-                  initial={{ opacity: 0, y: 18 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="relative rounded-md border border-white/10 bg-white/[3%] p-5 backdrop-blur"
-                >
-                  <div className="absolute -top-2 left-5 h-4 w-4 rounded-full border border-primary bg-background shadow-[0_0_30px_rgba(132,134,255,0.8)]" />
-                  <span className="text-gradient clash-grotesk text-sm font-semibold">
-                    {item.year}
-                  </span>
-                  <p className="mt-3 text-sm tracking-tight text-foreground">
-                    {item.title}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="certificates" data-scroll-section className="my-40">
-          <div
-            data-scroll
-            data-scroll-speed=".4"
-            className="rounded-md border border-white/10 bg-gradient-to-br from-primary/[6.5%] to-white/5 p-8 backdrop-blur xl:p-12"
-          >
-            <span className="text-gradient clash-grotesk text-base font-semibold tracking-tight">
-              {t.certificates.label}
-            </span>
-            <h2 className="mt-3 text-4xl font-semibold tracking-tighter xl:text-6xl">
-              {t.certificates.title}
-            </h2>
-            <p className="mt-3 max-w-3xl text-muted-foreground">
-              {t.certificates.body}
-            </p>
-            <div className="mt-8 flex items-center gap-3 rounded-md border border-dashed border-primary/40 bg-background/40 p-5 text-muted-foreground">
-              <Briefcase className="h-5 w-5 text-primary" />
-              {t.certificates.empty}
-            </div>
-          </div>
-        </section>
-
-
         <section id="contact" data-scroll-section className="my-56">
           <div
             data-scroll
